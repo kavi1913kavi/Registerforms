@@ -17,25 +17,33 @@ function App() {
     setvalue({...value,[e.target.name]:e.target.value})
     setError({...error,[e.target.name]:""});
   }
+
+
   const handleRegister=(e)=>{
     e.preventDefault();
-    
     var errorobject={name:"",email:""}
-
-  if(!value.name){
-    errorobject.name="Name is required"
-  }
-  else{
-    setError({...error,"name":""});
-  }
-
-  if(!value.email){
-    errorobject.email="Email is required "
-  }
-  else{
-    setError({...error,"email":""});
-  }
-  setError(errorobject);
+  
+    if(!value.name){
+      errorobject.name="Name is required"
+    }
+    else{
+      setError({...error,"name":""});
+    }
+    
+    if(!value.email){
+      errorobject.email="Email is required "
+    }
+    else{
+      setError({...error,"email":""});
+    }
+  
+    if(!value.name &&  !value.email){
+      setError(errorobject);
+      return false
+    }else{
+      alert("Registration Successfully")
+      return true
+    }
   }
   return (
     <div className="App">

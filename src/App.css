@@ -77,8 +77,3 @@ h4{
   padding: 0.6rem 3rem;
   font-weight: bold;
 }
-.btn:hover, .btn:focus, .btn:active, .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
-  background: #3494E6;
-  border: #3494E6;
-  outline: 0;
-}
